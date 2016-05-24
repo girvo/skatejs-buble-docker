@@ -1,0 +1,7 @@
+{
+    "project": "skate",
+    "volume": "code:/app",
+    "db": {
+        "type": "none"
+    }
+}
