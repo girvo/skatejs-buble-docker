@@ -5,7 +5,7 @@ An example project/scaffold for a [Skate](https://github.com/skatejs/skatejs/tre
 ## Building
 
 1. Clone the repository
-1. Build the image for production or development: `docker build --build-arg env=[prod|dev] skate:latest .`
+1. Build the image for production or development: `docker build [--build-arg env=dev] -t skate:latest .`
 
 ## Running
 

@@ -3,6 +3,9 @@
 ##
 FROM studionone/node6:latest
 
+# Set NODE_ENV to production provided build-arg hasn't been set
+ENV NODE_ENV=${env:-production}
+
 # Use a different entrypoint for development vs production
 ARG env=prod
 ADD conf/start.$env.sh /start.sh
@@ -14,4 +17,5 @@ RUN npm install
 
 EXPOSE 8080
 
+ENV NODE_PATH /app/node_modules
 ENTRYPOINT /start.sh
